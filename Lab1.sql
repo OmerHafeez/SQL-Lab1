@@ -1,0 +1,11 @@
+USE northwind;
+SELECT * FROM employees;
+SELECT CONCAT(FirstName,' ',LastName) AS NameE,employeeID,salary FROM employees;
+SELECT CONCAT(FirstName,' ',LastName) AS NameE,employeeID,salary*4 AS Salary FROM employees;
+SELECT DISTINCT reportsTo FROM employees;
+SELECT CONCAT(FirstName,' ',LastName) AS NameE,address,extension, hiredate ORDER BY extension;
+SELECT CONCAT(FirstName,' ',LastName) AS NameE ,address,extension, hiredate FROM employees ORDER BY extension;
+SELECT  * FROM employees WHERE (extension=5467 OR extension=428) AND salary>2000;
+SELECT  * FROM employees WHERE country='UK' OR country='USA';
+SELECT  * FROM employees WHERE region IS NULL;
+SELECT  homephone,CONCAT(FirstName,' ',LastName)AS NameE, Titleofcourtesy,address, salary FROM employees WHERE salary BETWEEN 1500 AND 2500;
